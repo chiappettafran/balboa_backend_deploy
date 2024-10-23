@@ -11,7 +11,6 @@ export const AppDataSource = new DataSource({
     database: "./database/basePrueba.db",
     username: "java_script",
     password: "frontend",
-
     synchronize: true,
     logging: false,
     entities: [User, Invoice, Invoice_Detail, Product, Category]
