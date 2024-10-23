@@ -49,11 +49,9 @@ AppDataSource.initialize().then(() => {
     console.log("Conexión Establecida")
 
     const PORT = process.env.PORT || 3001;
-    const HOST = process.env.HOST || 'localhost';
-    const PROTOCOL = process.env.PROTOCOL || 'http';
 
     app.listen(PORT, HOST, () => {
-        console.log(`Servidor escuchando en ${PROTOCOL}://${HOST}:${PORT}`);
+        console.log(`Servidor escuchando en: ${PORT}`);
     });
 
 }).catch((error) => console.log("Error al conectar a la base de datos:", error))
