@@ -7,11 +7,16 @@ import { Product } from "./entities/Product.js";
 import { Category } from "./entities/Category.js";
 
 export const AppDataSource = new DataSource({
-    type: "better-sqlite3",
-    database: "./database/basePrueba.db",
-    username: "java_script",
-    password: "frontend",
+    type: 'postgres',
+    host: 'dpg-csdanrbqf0us73b2lcj0-a',
+    port: 5432, // Puerto por defecto para PostgreSQL
+    username: 'balboa_db_user',
+    password: '4B617nC881Uu0f6mTGHOPDmIrgzsLGld',
+    database: 'balboa_db',
     synchronize: true,
     logging: false,
-    entities: [User, Invoice, Invoice_Detail, Product, Category]
+    entities: [User, Invoice, Invoice_Detail, Product, Category],
+    ssl: {
+        rejectUnauthorized: false,
+    },
 })
