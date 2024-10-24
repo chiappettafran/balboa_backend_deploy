@@ -9,7 +9,7 @@ export const Invoice = new EntitySchema({
             generated: true
         },
         date: {
-            type: "datetime"
+            type: "timestamp",  // Cambia de 'datetime' a 'timestamp' o 'date'
         },
         total_amount: {
             type: "float"
